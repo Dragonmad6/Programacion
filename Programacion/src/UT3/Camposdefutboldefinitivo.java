@@ -35,7 +35,7 @@ public class Camposdefutboldefinitivo {
 	     	
 	     	div = metros / campos;
 		
-	     		if (div == 5000){
+	     		if (div >= 4050 && div <=10800){
 				System.out.println("SI");
 				
 			  	
