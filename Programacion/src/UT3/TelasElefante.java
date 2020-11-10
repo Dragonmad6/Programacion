@@ -33,7 +33,7 @@ public class TelasElefante {
 					telaraña = entrada.nextInt();
 			}
 		}
-		System.out.println("La tela tiene que pesar algo.Fin del programa crack.");
+		System.out.println("La telaraña tiene que pesar algo.");
 		entrada.close();
 	}
 	
