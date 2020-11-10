@@ -21,7 +21,7 @@ public class TelasElefante {
 			suma = suma + elefante;
 			
 			if (suma > telaraña) {
-				System.out.println("La telaraña se ha roto!!");
+				System.out.println("La telaraña se ha roto!!!");
 					suma = 0;
 				System.out.println("Introduce el peso que soporta la telaraña.");
 					telaraña = entrada.nextInt();
