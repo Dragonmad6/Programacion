@@ -54,7 +54,7 @@ public class Poker {
 						
 							System.out.println("No se puede por que has repetido una carta.");
 						
-					}else {
+					}else if (carta[0] != carta[1] && carta[0] != carta[2] && carta[0] != carta[3] && carta[1] != carta[2] && carta[1] != carta[3] && carta[2] != carta[3] ) {
 						
 					
 						if (suma == 10 && carta[0] == 1 && carta[3] == 4) {
@@ -221,26 +221,28 @@ public class Poker {
 						// Normas de la casa
 						
 						if (suma == 27 && carta[0] == 1 ) {
-							System.out.println("No es una escalera legal.(Normas de la casa)");
+							System.out.println("No es una escalera de color.");
 						}
 						if (suma == 26 && carta[0] == 1 ) {
-							System.out.println("No es una escalera legal.(Normas de la casa)");
+							System.out.println("No es una escalera de color.");
 						}
 						if (suma == 38 && carta[0] == 2 ) {
-							System.out.println("No es una escalera legal.(Normas de la casa)");
+							System.out.println("No es una escalera de color.");
 						}
 						if (suma == 37 && carta[0] == 1 ) {
-							System.out.println("No es una escalera legal.(Normas de la casa)");
+							System.out.println("No es una escalera de color.");
 						}
 						if (suma == 28 && carta[0] == 1 ) {
-							System.out.println("No es una escalera legal.(Normas de la casa)");
+							System.out.println("No es una escalera de color.");
 						}
 						if (suma == 19 && carta[0] == 1 ) {
-							System.out.println("No es una escalera legal.(Normas de la casa)");
+							System.out.println("No es una escalera de color.");
 						}
-						
-						
-				}
+					}
+					else {
+						System.out.println("No es una escalera de color.");
+					}
+					
 				
 			}
 				
@@ -252,8 +254,6 @@ public class Poker {
 				System.out.println("No hay escalera.");
 				
 			}
-			
-				
 
 			System.out.println("Si quieres salir del programa pulse 0, sino, pulse 1.");
 			
