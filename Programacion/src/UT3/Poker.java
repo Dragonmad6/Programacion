@@ -62,7 +62,7 @@ public class Poker {
 						if (suma == 22) {
 							System.out.println("La carta que falta es el "+ (carta [3] + 1));
 						}
-						if (suma == 26) {
+						if (suma == 26) {sdsds
 							System.out.println("La carta que falta es el "+ (carta [3] + 1));
 						}
 						if (suma == 30) {
