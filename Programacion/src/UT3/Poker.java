@@ -54,7 +54,7 @@ public class Poker {
 						
 							System.out.println("No se puede por que has repetido una carta.");
 						
-					}else if (carta[0] != carta[1] && carta[0] != carta[2] && carta[0] != carta[3] && carta[1] != carta[2] && carta[1] != carta[3] && carta[2] != carta[3] ) {
+					} if (carta[0] != carta[1] && carta[0] != carta[2] && carta[0] != carta[3] && carta[1] != carta[2] && carta[1] != carta[3] && carta[2] != carta[3] ) {
 						
 					
 						if (suma == 10 && carta[0] == 1 && carta[3] == 4) {
@@ -238,10 +238,11 @@ public class Poker {
 						if (suma == 19 && carta[0] == 1 ) {
 							System.out.println("No es una escalera de color.");
 						}
+						else {
+							System.out.println("No es una escalera de color.");
+						}
 					}
-					else {
-						System.out.println("No es una escalera de color.");
-					}
+
 					
 				
 			}
@@ -265,7 +266,8 @@ public class Poker {
 }	
 
 
-//
+//Comprobacion guardar variables.
+
 //System.out.printf("\n");
 //for(int i=0; i<carta.length; i++) {
 //    System.out.println(carta[i]);
