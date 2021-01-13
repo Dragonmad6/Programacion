@@ -21,7 +21,10 @@ public class Semanal6 {
 		String palabra1 = "";
 		String palabra2 = "";
 		int salir = 0; 
- 
+		int salir2 = 0;
+		
+		while (salir != 1) {
+
 		do{
 			System.out.print("Escriba una palabra: ");
  				palabra1 = entrada.nextLine();
@@ -49,8 +52,10 @@ public class Semanal6 {
  			
  			System.out.println("No es un anagrama");
  		}
-		
-			}	
-
+			}
+ 		System.out.println("Si desea salir del programa pulse 1.");
+	
+ 			salir = entrada.nextInt();
+}
 	}
 }
