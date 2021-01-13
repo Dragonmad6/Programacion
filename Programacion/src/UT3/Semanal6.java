@@ -33,10 +33,11 @@ public class Semanal6 {
  					
  					System.out.println("La palabra no puede ser tan extensa"); 					
  				}else {
- 					System.out.print("Dame una segunda palabra (Tiene que tener los mismos caracteres si desea finalizar, escriba 'salir'): ");
+ 					System.out.print("Dame una segunda palabra (Tiene que tener los mismos caracteres si desea finalizar): ");
  						palabra2 = entrada.nextLine();
  					
  	 				if (palabra2.length() > 1000) {
+ 	 				
  	 					
  	 					System.out.println("La palabra no puede ser tan extensa"); 
  	 				}
