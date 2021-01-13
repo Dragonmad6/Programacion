@@ -22,7 +22,7 @@ public class Semanal6 {
 		String palabra2 = "";
 		int salir = 0; 
  
- 	while (salir == 0) {
+		do{
 			System.out.print("Escriba una palabra: ");
  				palabra1 = entrada.nextLine();
  				
@@ -38,17 +38,13 @@ public class Semanal6 {
  	 					System.out.println("La palabra no puede ser tan extensa"); 
  	 				}
  				}
-	 				salir = 1;	
- 			
+
  	}while (salir != 0); {
  		
- 		if (palabra1 == palabra2) {
- 			
- 			if (palabra1.length() == palabra2.length()) {
- 				
+ 		if (palabra1 == palabra2 || palabra1.length() == palabra2.length()) {
+
  				System.out.println("Si es un anagrama");
- 			}
- 			
+ 
  		}else {
  			
  			System.out.println("No es un anagrama");
