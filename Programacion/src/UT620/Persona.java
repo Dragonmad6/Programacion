@@ -69,6 +69,7 @@ public class Persona {
 	}
 	
 	public void setApellidos(String apellidos) {
+		//Cada apellido con la letra en mayuscula
 		apellidos = convertirNombresPropios(apellidos);
 		
 		//Si es menor que 4, uso sin especificar
@@ -79,6 +80,7 @@ public class Persona {
 	}
 	
 	public void setAnio(int anio) {
+		//Cumpla las restricciones de edad menor o mayor que esos años
 		if (anio < 1900 || anio > 2020)
 			anio = 2000;
 		
@@ -86,6 +88,7 @@ public class Persona {
 	}
 	
 	public void setMes(int mes) {
+	//Verifica que cumpla en un mes entre el 1 y el 12
 		if (mes < 1 || mes > 12)
 			mes = 1;
 		
@@ -93,6 +96,7 @@ public class Persona {
 	}
 	
 	public void setDia(int dia) {
+	//Verifica el día de nacimiento entre los días 1 y 31
 		if (dia < 1 || dia > 31)
 			dia = 1;
 		
@@ -100,6 +104,7 @@ public class Persona {
 	}
 	
 	public void setSexo(char sexo) {
+	//Verifica si es H o M
 		if (sexo != 'H' || sexo != 'M')
 			sexo = 'X';
 		this.sexo = sexo;
