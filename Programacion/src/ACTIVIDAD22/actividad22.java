@@ -17,77 +17,56 @@ public class actividad22 {
 		 Scanner sc = new Scanner(System.in);
 		 String titulo, autor;
 			 int ejemplares;
-		 //se crea el objeto libro1 utilizando el constructor con parámetros
-			 Libro libro1 = new Libro("El quijote","Cervantes", 1, 0);
-		 //se crea el objeto libro2 utilizando el constructor por defecto
-			 Libro libro2 = new Libro();
-			 	System.out.print("Introduce titulo: ");
-			 		titulo = sc.nextLine();
-			 	System.out.print("Introduce autor: ");
-			 		autor = sc.nextLine();
-			 	System.out.print("Numero de ejemplares: ");
-			 		ejemplares = sc.nextInt();
-		//se asigna a libro2 los datos pedidos por teclado.
-		 //para ello se utilizan los métodos setters
-			 libro2.setTitulo(titulo);
-			 libro2.setAutor(autor);
-			 libro2.setEjemplares(ejemplares);
-			 //se muestran por pantalla los datos del objeto libro1
-			 //se utilizan los métodos getters para acceder al valor de los atributos
-			 System.out.println("Libro 1:");
-			 System.out.println("Titulo: " + libro1.getTitulo());
-			 System.out.println("Autor: " + libro1.getAutor());
-			 System.out.println("Ejemplares: " + libro1.getEjemplares());
-			 System.out.println("Prestados: " + libro1.getPrestados());
-			 System.out.println();
-			 //se realiza un préstamo de libro1. El método devuelve true si se ha podido
-			 //realizar el préstamo y false en caso contrario
-			 if (libro1.prestamos()) {
-			 System.out.println("Se ha prestado el libro " + libro1.getTitulo());
+		// Crea un objeto de la clase Libro llamado libro1 con los siguientes datos
+			 Libro libro1 = new Libro("La casa de la pradera", "Chiquito de la calzada", 10, 9);
+	    // Crea un objeto de la clase Libro llamado libro2 con los siguientes datos:
+			 Libro libro2 = new Libro("El ultimo mohicano", "Kiko Rivera", 5, 4);
+	    //Simula un alquiler del libro1 y comprueba si se ha hecho o no.
+			 if (libro1.prestamo()) {
+			 System.out.println("Se ha prestado el libro " + libro1.getTitulo()+" hay prestados: "+libro1.getPrestamos());
 			 } else {
-			 System.out.println("No quedan ejemplares del libro " + libro1.getTitulo() + "para	prestar");
+			 System.out.println("No quedan ejemplares del libro " + libro1.getTitulo() + " para	prestar.");
 			 }
-			 //se realiza una devolución de libro1. El método devuelve true si se ha podido
-			
-			 //realizar la devolución y false en caso contrario
+		//Muestra el numero de ejemplares prestados de libro1
+			 System.out.println("\nHay "+libro1.getPrestamos()+"\n");
+		//Simula otro alquiler del libro 1 y vuelve a mostrar los ejemplares prestados
+			 if (libro1.prestamo()) {
+			 System.out.println("Se ha prestado el libro " + libro1.getTitulo()+" hay prestados: "+libro1.getPrestamos());
+			 } else {
+			 System.out.println("No quedan ejemplares del libro " + libro1.getTitulo() + " para prestar, hay prestados: "+libro1.getPrestamos()+"\n");
+			 }
+	   //Realiza una devolucion de un ejemplar del libro1.
 			 if (libro1.devolucion()) {
 			 System.out.println("Se ha devuelto el libro " + libro1.getTitulo());
 			 } else {
-			 System.out.println("No hay ejemplares del libro " + libro1.getTitulo() + " prestados");
+			 System.out.println("No hay ejemplares del libro " + libro1.getTitulo() + " prestados \n");
 			 }
-			 //se realiza otro préstamo de libro1
-			 if (libro1.prestamos()) {
-			 System.out.println("Se ha prestado el libro " + libro1.getTitulo());
+	   //Pon (set) el numero de ejemplares prestados del libro1 a 0
+			 libro1.setPrestamos(0);
+	   //Haz la devolucion de un ejemplar de libro1 y muestra el numero de ejemplares prestados. 
+			 if (libro1.devolucion()) {
+			 System.out.println("Se ha devuelto el libro " + libro1.getTitulo()+" quedan: "+libro1.getPrestamos());
 			 } else {
-			 System.out.println("No quedan ejemplares del libro " + libro1.getTitulo() + "para	prestar");
+			 System.out.println("\nNo hay ejemplares del libro " + libro1.getTitulo() + " prestados, quedan: "+libro1.getPrestamos()+ "\n");
 			 }
-			 //se realiza otro préstamo de libro1. En este caso no se podrá realizar ya que
-			 //solo hay un ejemplar de este libro y ya está prestado. Se mostrará por
-			 //pantalla el mensaje No quedan ejemplares del libro…
-			 if (libro1.prestamos()) {
-			 System.out.println("Se ha prestado el libro " + libro1.getTitulo());
-			 } else {
-			 System.out.println("No quedan ejemplares del libro " + libro1.getTitulo() + "para prestar");
-			 }
-			 //mostrar los datos del objeto libro1
-			 System.out.println("Libro 1:");
-			 System.out.println("Titulo: " + libro1.getTitulo());
-			 System.out.println("Autor: " + libro1.getAutor());
-			 System.out.println("Ejemplares: " + libro1.getEjemplares());
-			 System.out.println("Prestados: " + libro1.getPrestados());
-			 System.out.println();
-			 //mostrar los datos del objeto libro2
-			 System.out.println("Libro 2:");
-			 System.out.println("Titulo: " + libro2.getTitulo());
-			 System.out.println("Autor: " + libro2.getAutor());
-			 System.out.println("Ejemplares: " + libro2.getEjemplares());
-			 System.out.println("Prestados: " + libro2.getPrestados());
-			 System.out.println();
-			 }
+	   //Muestra el contenido de libro2 (tostring)
+			 System.out.println(libro2.toString()+"\n");
 	
+	   //Pide al usuario que introduzca los datos de un tercer libro (libro3) y muestralo despues.
+			 Libro libro3 = new Libro();
+		        System.out.println("Título del libro: ");
+		        	libro3.setTitulo(sc.nextLine());
+		        System.out.println("Autor del libro: ");
+		        	libro3.setAutor(sc.nextLine());
+		        System.out.println("Ejemplares del libro: ");
+		        	libro3.setEjemplares(sc.nextInt());
+		        System.out.println("Libros prestados: ");
+		        	libro3.setPrestamos(sc.nextInt());
+		        System.out.println(libro3.toString());
+			 
 
 
 
+			 }
 	}
-
 
