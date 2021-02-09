@@ -53,8 +53,15 @@ public class PlayList {
 	public boolean borraCancion(int posicion) {
 
 		boolean borrar = true;
-			if(PlayList.size() > 0 ) {
-				
+			if(PlayList.size() > 0) {
+				if(PlayList.size() >= posicion) {
+					borrar = true;
+					PlayList.remove(posicion);
+				}else {
+					borrar = false;
+				}
+			}else {
+				borrar = false;
 			}
 		return borrar;
 	}
