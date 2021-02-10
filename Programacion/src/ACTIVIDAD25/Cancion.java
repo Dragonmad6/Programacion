@@ -46,6 +46,9 @@ public class Cancion {
 		return this.titulo+" - "+this.artista+"("+this.duracionMinutos+" minutos)";
 	}
 
+	public String reproducir() {
+		return "Reproduciendo "+titulo+"...";
+	}
 
 
 }

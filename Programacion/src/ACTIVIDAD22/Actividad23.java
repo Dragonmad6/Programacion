@@ -32,7 +32,7 @@ public class Actividad23 {
 	//Cases
 		
 		switch(opcion) {
-			// Characteristics of the book
+			//Characteristics of the book
 			case 1:
 					System.out.println("Escriba a continuación las características del libro.");
 					System.out.println("Nombre del libro: ");
