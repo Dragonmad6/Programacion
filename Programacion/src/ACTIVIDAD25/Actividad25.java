@@ -61,7 +61,9 @@ public class Actividad25 {
 					artista = sc2.nextLine();
 				System.out.println("Duracion de la cancion: ");
 					duracionMinutos = sc.nextInt();
-					
+				if(duracionMinutos <= 0) {
+					System.out.println("La cancion tiene que durar algo...");
+				}					
 					playlist.anyadirCancion(titulo, artista, duracionMinutos);
 				System.out.println("Cancion registrada correctamente.\n");
 				break;
