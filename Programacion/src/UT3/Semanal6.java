@@ -3,60 +3,55 @@
  */
 package UT3;
 import java.util.Scanner;
+import java.util.Arrays;
 /**
  * @author CMaster
  *
  */
 public class Semanal6 {
-
+	
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
  
-		Scanner entrada = new Scanner(System.in);
+		Scanner entrada1 = new Scanner(System.in);
+		Scanner entrada2 = new Scanner(System.in);
+		Scanner salida = new Scanner(System.in);
 		
-		
+		String salir = "";
 		String palabra1 = "";
 		String palabra2 = "";
-		int salir = 0; 
-		int salir2 = 0;
 		
-		while (salir != 1) {
+		System.out.println("Programa de Anagramas");
+		do {
+			System.out.println("Escriba 'salir' para detener el programa sino escriba cualquier cosa:\n");
+				salir = salida.nextLine();
+			if(salir.equals("salir") == true) {
+				System.out.println("El programa ha finalizado.");
+			}else {
+				System.out.println("Escriba la primera palabra: \n");
+					palabra1 = entrada1.nextLine();	
+				System.out.println("Escriba la segunda palabra: \n");
+					palabra2 = entrada2.nextLine();
+				
+				char[] frase1 = palabra1.toCharArray();
+				char[] frase2 = palabra2.toCharArray();
+				
+				Arrays.sort(frase1);
+				Arrays.sort(frase2);
+				
+				palabra1 = new String(frase1);					
+				palabra2 = new String(frase2);	
 
-		do{
-			System.out.print("Escriba una palabra: ");
- 				palabra1 = entrada.nextLine();
- 				
- 				if (palabra1.length() > 1000) {
- 					
- 					System.out.println("La palabra no puede ser tan extensa"); 					
- 				}else {
- 					System.out.print("Dame una segunda palabra (Tiene que tener los mismos caracteres si desea finalizar): ");
- 						palabra2 = entrada.nextLine();
- 					
- 	 				if (palabra2.length() > 1000) {
- 	 				
- 	 					
- 	 					System.out.println("La palabra no puede ser tan extensa"); 
- 	 				}
- 				}
-
- 	}while (salir != 0); {
- 		
- 		if (palabra1 == palabra2 || palabra1.length() == palabra2.length()) {
-
- 				System.out.println("Si es un anagrama");
- 
- 		}else {
- 			
- 			System.out.println("No es un anagrama");
- 		}
+				if (palabra1.equals(palabra2)) {
+					System.out.println("Si es un anagrama.\n");
+				} else {
+					System.out.println("No es un anagrama.\n");
+				}
 			}
- 		System.out.println("Si desea salir del programa pulse 1.");
-	
- 			salir = entrada.nextInt();
-}
+		}while(salir.equals("salir") == false);
 	}
 }
+
